@@ -1,4 +1,5 @@
 import static java.lang.System.out;
+import java.util.Scanner;
 
 public class Main {
     public int findFirst(int[] arr, int x) {
@@ -10,12 +11,25 @@ public class Main {
         return -1;
     }
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         Main obj = new Main();
-        int[] arr = {1, 2, 3, 4, 2, 2, 5};
-        int x = 2;
-        out.println("Массив: [1,2,3,4,2,2,5]");
+        
+        out.print("Введите размер массива: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        out.print("Введите элементы массива: ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        
+        out.print("Введите искомое число: ");
+        int x = sc.nextInt();
+        
+        out.println("Массив: " + java.util.Arrays.toString(arr));
         out.println("Ищем: " + x);
         out.println("Результат:");
         out.println(obj.findFirst(arr, x));
+        
+        sc.close();
     }
 }
