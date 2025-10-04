@@ -1,4 +1,5 @@
 import static java.lang.System.out;
+import java.util.Scanner;
 
 public class Main {
     public int maxAbs(int[] arr) {
@@ -13,10 +14,21 @@ public class Main {
         return max;
     }
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         Main obj = new Main();
-        int[] arr = {1, -2, -7, 4, 2, 2, 5};
-        out.println("Массив: [1,-2,-7,4,2,2,5]");
+        
+        out.print("Введите размер массива: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        out.print("Введите элементы массива: ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        
+        out.println("Массив: " + java.util.Arrays.toString(arr));
         out.println("Результат:");
         out.println(obj.maxAbs(arr));
+        
+        sc.close();
     }
 }
