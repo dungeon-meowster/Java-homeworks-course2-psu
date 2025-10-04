@@ -24,11 +24,8 @@ public class Main {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        
         out.println("Массив: " + java.util.Arrays.toString(arr));
         out.println("Результат:");
         out.println(obj.maxAbs(arr));
-        
-        sc.close();
     }
 }
