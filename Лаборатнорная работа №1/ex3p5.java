@@ -3,6 +3,9 @@ import static java.lang.System.out;
 
 public class Main {
     public int numLen(long x) {
+        if (x == 0) {
+            return 1;
+        }
         x = Math.abs(x);
         int len = 0;
         while (x > 0) {
