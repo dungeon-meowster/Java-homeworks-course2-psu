@@ -19,7 +19,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Main obj = new Main();
-        
         out.print("Введите размер исходного массива: ");
         int n = sc.nextInt();
         int[] arr = new int[n];
@@ -27,7 +26,6 @@ public class Main {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        
         out.print("Введите размер вставляемого массива: ");
         int m = sc.nextInt();
         int[] ins = new int[m];
@@ -35,29 +33,13 @@ public class Main {
         for (int i = 0; i < m; i++) {
             ins[i] = sc.nextInt();
         }
-        
         out.print("Введите позицию вставки: ");
         int pos = sc.nextInt();
-        
-        out.print("Исходный: [");
-        for (int num : arr) {
-            out.print(num + ",");
-        }
-        out.println("]");
-        
-        out.print("Вставляем: [");
-        for (int num : ins) {
-            out.print(num + ",");
-        }
-        out.println("] на позицию " + pos);
-        
         int[] result = obj.add(arr, ins, pos);
-        out.print("Результат: [");
+
+        out.print("Результат:");
         for (int num : result) {
-            out.print(num + ",");
+            out.print(num + " ");
         }
-        out.println("]");
-        
-        sc.close();
     }
 }
