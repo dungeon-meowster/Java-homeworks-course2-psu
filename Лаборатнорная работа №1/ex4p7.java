@@ -12,7 +12,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Main obj = new Main();
-        
         out.print("Введите размер массива: ");
         int n = sc.nextInt();
         int[] arr = new int[n];
@@ -20,20 +19,11 @@ public class Main {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        
-        out.print("Исходный: [");
-        for (int num : arr) {
-            out.print(num + ",");
-        }
-        out.println("]");
-        
+
         int[] result = obj.reverseBack(arr);
-        out.print("Результат: [");
+        out.print("Результат: ");
         for (int num : result) {
-            out.print(num + ",");
+            out.print(num + " ");
         }
-        out.println("]");
-        
-        sc.close();
     }
 }
