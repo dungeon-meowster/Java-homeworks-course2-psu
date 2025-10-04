@@ -9,9 +9,8 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        out.println("Введите вещественное число (с точкой или запятой):");
+        out.println("Введите вещественное число:");
         String input = scanner.next();
-        input = input.replace(',', '.');
         double number = Double.parseDouble(input);
         number = fraction(number);
         out.println("Результат:");
