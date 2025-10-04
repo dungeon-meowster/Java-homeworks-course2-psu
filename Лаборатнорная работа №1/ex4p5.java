@@ -1,4 +1,5 @@
 import static java.lang.System.out;
+import java.util.Scanner;
 
 public class Main {
     public int[] add(int[] arr, int[] ins, int pos) {
@@ -16,17 +17,47 @@ public class Main {
         return newArr;
     }
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         Main obj = new Main();
-        int[] arr = {1, 2, 3, 4, 5};
-        int[] ins = {7, 8, 9};
-        int pos = 3;
-        out.println("Исходный: [1,2,3,4,5]");
-        out.println("Вставляем: [7,8,9] на позицию " + pos);
+        
+        out.print("Введите размер исходного массива: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        out.print("Введите элементы исходного массива: ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        
+        out.print("Введите размер вставляемого массива: ");
+        int m = sc.nextInt();
+        int[] ins = new int[m];
+        out.print("Введите элементы вставляемого массива: ");
+        for (int i = 0; i < m; i++) {
+            ins[i] = sc.nextInt();
+        }
+        
+        out.print("Введите позицию вставки: ");
+        int pos = sc.nextInt();
+        
+        out.print("Исходный: [");
+        for (int num : arr) {
+            out.print(num + ",");
+        }
+        out.println("]");
+        
+        out.print("Вставляем: [");
+        for (int num : ins) {
+            out.print(num + ",");
+        }
+        out.println("] на позицию " + pos);
+        
         int[] result = obj.add(arr, ins, pos);
         out.print("Результат: [");
         for (int num : result) {
             out.print(num + ",");
         }
         out.println("]");
+        
+        sc.close();
     }
 }
