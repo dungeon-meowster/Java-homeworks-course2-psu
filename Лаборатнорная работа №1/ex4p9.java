@@ -1,4 +1,5 @@
 import static java.lang.System.out;
+import java.util.Scanner;
 
 public class Main {
     public int[] findAll(int[] arr, int x) {
@@ -19,16 +20,35 @@ public class Main {
         return indices;
     }
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         Main obj = new Main();
-        int[] arr = {1, 2, 3, 8, 2, 2, 9};
-        int x = 2;
-        out.println("Массив: [1,2,3,8,2,2,9]");
+        
+        out.print("Введите размер массива: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        out.print("Введите элементы массива: ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        
+        out.print("Введите искомое число: ");
+        int x = sc.nextInt();
+        
+        out.print("Массив: [");
+        for (int num : arr) {
+            out.print(num + ",");
+        }
+        out.println("]");
+        
         out.println("Ищем: " + x);
+        
         int[] result = obj.findAll(arr, x);
         out.print("Результат: [");
         for (int i : result) {
             out.print(i + ",");
         }
         out.println("]");
+        
+        sc.close();
     }
 }
