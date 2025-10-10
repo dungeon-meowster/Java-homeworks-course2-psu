@@ -50,6 +50,5 @@ public class Main {
         for (int num : result) {
             out.print(num + " ");
         }
-        out.println();
     }
 }
