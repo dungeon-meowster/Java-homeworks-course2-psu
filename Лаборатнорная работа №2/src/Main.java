@@ -23,7 +23,7 @@ public class Main {
                 student();
                 break;
             case 4:
-                out.println("Задание 4: задачи 1 и 2: Создаем Точку и Линию");
+                out.println("Задание 4: задачи 1 и 2: Создаём Точку, Создаём Линию");
                 createPointAndLine();
                 break;
             case 5:
@@ -150,4 +150,5 @@ public class Main {
             }
         }
     }
+
 }
